@@ -1,0 +1,143 @@
+@use '../abstracts' as *; 
+
+body {
+    background: #f4f7fd;
+    header {
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0px 22px 27px -22px rgba(221,215,215,0.45);
+        .header-top {
+            padding: 20px 0;
+            border-bottom: 1px solid #e6e8ee;
+            &__content {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                .header-top__category-btn {
+                    color: white;
+                    padding: 10px 20px;
+                    background: $color-first;
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    cursor: pointer;
+                    &:hover {
+                        background: $color-second;
+                        transition: .2s ease-in-out;
+                    }
+                    span {
+                        font-size: 14px;
+                        letter-spacing: 0.2px;
+                    }
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 3px;
+                        span {
+                            background: white;
+                            width: 16px;
+                            height: 1px;
+                        }
+                    }
+                }
+                .header-top__search-form {
+                    display: flex;
+                    align-items: center;
+                    input {
+                        color: $color-first;
+                        width: 400px;
+                        padding: 9px 10px;
+                        border: 2px solid $color-first;
+                        border-right: 0px;
+                        border-radius: 8px 0 0 8px;
+                        font-size: 14px;
+                        &::placeholder {
+                            color: #d0d3dd;
+                        }
+                    }
+                    button {
+                        color: white;
+                        font-size: 16px;
+                        background: $color-first;
+                        padding: 10px 14px;
+                        border-radius: 0 8px 8px 0;
+                        cursor: pointer;
+                        &:hover {
+                            background: $color-second;
+                            transition: .2s ease-in-out;
+                        }
+                    }
+                }
+                .header-top__list {
+                    display: flex;
+                    align-items: end;
+                    a {
+                        width: 83px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 4px;
+                        &:hover {
+                            svg {
+                                transition: .1s;
+                                fill: $color-second;
+                            }
+                            span {
+                                transition: .1s;
+                                color: $color-second;
+                            }
+                        }
+                        span {
+                            font-size: 12px;
+                            letter-spacing: 0.5px;
+                        }
+                        svg {
+                            fill: #1E293B;
+                        }
+                    }
+                    a:nth-child(4), a:nth-child(5) {
+                        position: relative;
+                        div {
+                            position: absolute;
+                            top: -4px;
+                            right: 20px;
+                            color: white;
+                            font-size: 10px;
+                            padding: 2px 6px;
+                            background: $color-first;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        .header-bottom {
+            padding: 17px 0;
+            .header-nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &__link {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    color: $color-third;
+                    &:hover {
+                        color: $color-first;
+                        transition: .2s;
+                    }
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

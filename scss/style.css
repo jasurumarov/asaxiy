@@ -1,0 +1,514 @@
+.container {
+  max-width: 1392px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: Roboto500;
+  src: url("../../fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: Roboto700;
+  src: url("../../fonts/Roboto-Bold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+  scroll-behavior: smooth;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#backtop {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  background: #FFF;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 12px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+body {
+  background: #f4f7fd;
+}
+body header {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0px 22px 27px -22px rgba(221, 215, 215, 0.45);
+}
+body header .header-top {
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e8ee;
+}
+body header .header-top__content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+body header .header-top__content .header-top__category-btn {
+  color: white;
+  padding: 10px 20px;
+  background: #008dff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+body header .header-top__content .header-top__category-btn:hover {
+  background: #0073cf;
+  transition: 0.2s ease-in-out;
+}
+body header .header-top__content .header-top__category-btn span {
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+body header .header-top__content .header-top__category-btn div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+body header .header-top__content .header-top__category-btn div span {
+  background: white;
+  width: 16px;
+  height: 1px;
+}
+body header .header-top__content .header-top__search-form {
+  display: flex;
+  align-items: center;
+}
+body header .header-top__content .header-top__search-form input {
+  color: #008dff;
+  width: 400px;
+  padding: 9px 10px;
+  border: 2px solid #008dff;
+  border-right: 0px;
+  border-radius: 8px 0 0 8px;
+  font-size: 14px;
+}
+body header .header-top__content .header-top__search-form input::-moz-placeholder {
+  color: #d0d3dd;
+}
+body header .header-top__content .header-top__search-form input::placeholder {
+  color: #d0d3dd;
+}
+body header .header-top__content .header-top__search-form button {
+  color: white;
+  font-size: 16px;
+  background: #008dff;
+  padding: 10px 14px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+body header .header-top__content .header-top__search-form button:hover {
+  background: #0073cf;
+  transition: 0.2s ease-in-out;
+}
+body header .header-top__content .header-top__list {
+  display: flex;
+  align-items: end;
+}
+body header .header-top__content .header-top__list a {
+  width: 83px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+}
+body header .header-top__content .header-top__list a:hover svg {
+  transition: 0.1s;
+  fill: #0073cf;
+}
+body header .header-top__content .header-top__list a:hover span {
+  transition: 0.1s;
+  color: #0073cf;
+}
+body header .header-top__content .header-top__list a span {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+body header .header-top__content .header-top__list a svg {
+  fill: #1E293B;
+}
+body header .header-top__content .header-top__list a:nth-child(4), body header .header-top__content .header-top__list a:nth-child(5) {
+  position: relative;
+}
+body header .header-top__content .header-top__list a:nth-child(4) div, body header .header-top__content .header-top__list a:nth-child(5) div {
+  position: absolute;
+  top: -4px;
+  right: 20px;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  background: #008dff;
+  border-radius: 50%;
+}
+body header .header-bottom {
+  padding: 17px 0;
+}
+body header .header-bottom .header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header .header-bottom .header-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #282830;
+}
+body header .header-bottom .header-nav__link:hover {
+  color: #008dff;
+  transition: 0.2s;
+}
+body header .header-bottom .header-nav__link img {
+  width: 30px;
+  height: 30px;
+}
+
+body main {
+  margin-top: 164px;
+}
+body main .products-section__see-all {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 36px;
+  color: #262626;
+  font-size: 18px;
+  cursor: pointer;
+}
+body main .products-section__products {
+  margin-bottom: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+body main .products-section__products .loading {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+body main .products-section__products .products-section__products__card {
+  position: relative;
+  font-family: Roboto500;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  background: white;
+  padding: 15px;
+  width: 256.4px;
+  cursor: pointer;
+}
+body main .products-section__products .products-section__products__card .products__card-absolutes p {
+  background: red;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  text-transform: uppercase;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 2;
+}
+body main .products-section__products .products-section__products__card .products__card-absolutes .products__card-absolutes--heart {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 25px;
+  height: 25px;
+}
+body main .products-section__products .products-section__products__card .products__card-absolutes .products__card-absolutes--compare {
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 48px;
+  width: 25px;
+  height: 25px;
+}
+body main .products-section__products .products-section__products__card .products__card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  height: 160px;
+}
+body main .products-section__products .products-section__products__card .products__card-img img {
+  width: 157px;
+  height: 157px;
+}
+body main .products-section__products .products-section__products__card .products__card-info .products__card-info--title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  margin-bottom: 18px;
+  height: 36px;
+}
+body main .products-section__products .products-section__products__card .products__card-info .products__card-info--rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+body main .products-section__products .products-section__products__card .products__card-info .products__card-info--rating div {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+body main .products-section__products .products-section__products__card .products__card-info .products__card-info--rating div p {
+  color: #C3C6D1;
+  font-size: 12px;
+  font-family: Roboto500;
+}
+body main .products-section__products .products-section__products__card .products__card-info .products__card-info--prices h3 {
+  color: #008dff;
+  font-size: 18px;
+  font-family: Roboto700;
+}
+body main .products-section__products .products-section__products__card .products__card-info .products__card-info--prices p {
+  width: 100%;
+  border: 1px solid #fe7300;
+  color: #fe7300;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Roboto500;
+  padding: 0.25rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.25rem !important;
+  border-radius: 0.25rem !important;
+}
+body main .products-section__products .products-section__products__card .products__card-btns {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .products-section__products .products-section__products__card .products__card-btns .products__card-btns--buy {
+  color: white;
+  padding: 10px 36px;
+  background: #008dff;
+  border-radius: 10px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+body main .products-section__products .products-section__products__card .products__card-btns .products__card-btns--buy:hover {
+  background: #0073cf;
+  transition: 0.2s ease-in-out;
+}
+body main .products-section__products .products-section__products__card .products__card-btns .products__card-btns--cart {
+  padding: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 53px;
+  background: #00bfaf;
+  cursor: pointer;
+}
+body main .products-section__products .products-section__products__card:hover .products__card-info .products__card-info--title {
+  color: #008dff;
+  transition: 0.2s;
+}
+body main .products-section__products .products-section__products__card:hover .products__card-img img {
+  width: 160px;
+  height: 160px;
+  transition: 0.2s;
+}
+body main .liked-section {
+  display: none;
+}
+body main .liked-section .liked-section__close {
+  position: fixed;
+  right: 16px;
+  top: 160px;
+  cursor: pointer;
+  fill: black;
+}
+body main .liked-section .liked-section__close:hover {
+  fill: #008dff;
+  transition: 0.2s;
+}
+body main .liked-section__liked-products {
+  margin-bottom: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+body main .liked-section__liked-products .products-section__products__card {
+  position: relative;
+  font-family: Roboto500;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  background: white;
+  padding: 15px;
+  width: 256.4px;
+  cursor: pointer;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-absolutes p {
+  background: red;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  text-transform: uppercase;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 2;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-absolutes .products__card-absolutes--heart {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 25px;
+  height: 25px;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-absolutes .products__card-absolutes--compare {
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 48px;
+  width: 25px;
+  height: 25px;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  height: 160px;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-img img {
+  width: 157px;
+  height: 157px;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-info .products__card-info--title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  margin-bottom: 18px;
+  height: 36px;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-info .products__card-info--rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-info .products__card-info--rating div {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-info .products__card-info--rating div p {
+  color: #C3C6D1;
+  font-size: 12px;
+  font-family: Roboto500;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-info .products__card-info--prices h3 {
+  color: #008dff;
+  font-size: 18px;
+  font-family: Roboto700;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-info .products__card-info--prices p {
+  width: 100%;
+  border: 1px solid #fe7300;
+  color: #fe7300;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Roboto500;
+  padding: 0.25rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.25rem !important;
+  border-radius: 0.25rem !important;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-btns {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-btns .products__card-btns--buy {
+  color: white;
+  padding: 10px 36px;
+  background: #008dff;
+  border-radius: 10px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-btns .products__card-btns--buy:hover {
+  background: #0073cf;
+  transition: 0.2s ease-in-out;
+}
+body main .liked-section__liked-products .products-section__products__card .products__card-btns .products__card-btns--cart {
+  padding: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 53px;
+  background: #00bfaf;
+  cursor: pointer;
+}
+body main .liked-section__liked-products .products-section__products__card:hover .products__card-info .products__card-info--title {
+  color: #008dff;
+  transition: 0.2s;
+}
+body main .liked-section__liked-products .products-section__products__card:hover .products__card-img img {
+  width: 160px;
+  height: 160px;
+  transition: 0.2s;
+}
+body main .showLiked-section {
+  margin-top: 144px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  min-height: 2000px;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #f4f7fd;
+}/*# sourceMappingURL=style.css.map */
