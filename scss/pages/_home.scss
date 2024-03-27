@@ -3,6 +3,9 @@
 body {
     main {
         margin-top: 164px;
+        .search-section {
+            display: none;
+        }
         .products-section {
             &__see-all {
                 display: flex;
@@ -20,9 +23,10 @@ body {
                 justify-content: center;
                 gap: 20px;
                 margin-top: 20px;
-                .loading {
+                .loading-group {
                     display: flex;
-                    flex-direction: column;
+                    justify-content: center;
+                    flex-wrap: wrap;
                     gap: 30px;
                 }
                 .products-section__products__card {
@@ -342,6 +346,51 @@ body {
             left: 0;
             right: 0;
             background: #f4f7fd;
+        }
+    }
+}
+
+@media (max-width: 976px) {
+    body {
+        main {
+            .search-section {
+                display: block;
+                margin-top: -70px;
+                &__content {
+                    display: flex;
+                    justify-content: center;
+                    .search-section__search-form {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        input {
+                            color: $color-first;
+                            width: 976px;
+                            padding: 9px 10px;
+                            border: 2px solid $color-first;
+                            border-right: 0px;
+                            border-radius: 8px 0 0 8px;
+                            font-size: 14px;
+                            &::placeholder {
+                                color: #d0d3dd;
+                            }
+                        }
+                        button {
+                            color: white;
+                            font-size: 16px;
+                            background: $color-first;
+                            padding: 10px 14px;
+                            border-radius: 0 8px 8px 0;
+                            cursor: pointer;
+                            &:hover {
+                                background: $color-second;
+                                transition: .2s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
